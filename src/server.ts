@@ -1,7 +1,7 @@
 import "dotenv/config"
 import express from 'express';
 import bodyParser from 'body-parser';
-import router from './routes/router';
+import router from './routes';
 
 
 export default class App {

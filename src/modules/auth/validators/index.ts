@@ -12,7 +12,10 @@ const authValidator = [
     .exists()
     .isStrongPassword({
       minLength: 8,
-      minNumbers: 1,
+      minNumbers: 0,
+      minLowercase: 0,
+      minSymbols: 0,
+      minUppercase: 0,
     })
     .withMessage(
       "The password field must contain at least 8 characters, including one numeric character"

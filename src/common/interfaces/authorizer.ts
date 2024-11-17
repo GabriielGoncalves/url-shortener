@@ -6,8 +6,8 @@ interface IResponseAuthorizer {
 }
 
 interface IAuthorizer {
-  generateToken(user: User): Promise<IResponseAuthorizer>;
-  isValidToken(token: string): Promise<JwtPayload | string>;
+  generateToken(user: User): IResponseAuthorizer;
+  isValidToken(token: string): JwtPayload | string;
 }
 
 export { IAuthorizer, IResponseAuthorizer };

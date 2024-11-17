@@ -6,7 +6,7 @@ import {
   IResponseAuthentication,
 } from "../../interfaces/authenticator";
 
-class Authenticator implements IAuthenticator {
+export class Authenticator implements IAuthenticator {
   constructor(protected repo: IRepository) {}
 
   async login(data: any): Promise<IResponseAuthentication> {
@@ -27,7 +27,7 @@ class Authenticator implements IAuthenticator {
     }
   }
 
-  getFilter(data: any) {
+  protected getFilter(data: any) {
     return {
       email: data.email,
     };

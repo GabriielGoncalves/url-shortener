@@ -3,7 +3,7 @@ import Repository from "../../../database/repositories";
 import connection from "../../../database/connection";
 import { UrlShortener } from "../../../database/entities/urlShortener";
 
-class UrlShortenerRepository extends Repository {
+export class UrlShortenerRepository extends Repository {
   protected override instanceRepository: typeOrmRepository<any> =
     connection.getRepository(UrlShortener);
 

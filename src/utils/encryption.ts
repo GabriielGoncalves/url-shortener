@@ -1,11 +1,10 @@
 import bcrypt from "bcrypt";
-
-const salt = Number(process.env.CRYPT_SALT!);
+import environment from "./enviroment";
 
 export default class Encryption {
   static async encrypt(text: string): Promise<string> {
     try {
-      return await bcrypt.hash(text, salt);
+      return await bcrypt.hash(text, environment.salt);
     } catch (error) {
       throw new Error("Failed to encrypt text.");
     }

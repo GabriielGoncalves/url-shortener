@@ -1,0 +1,9 @@
+###
+POST http://localhost:3000/api/shortener/ HTTP/1.0
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiMDhjYTgzZDItNzc2OS00ZGYzLWExNzYtZGQwMjIxNWQ2NjQ2IiwiY3JlYXRlZF9hdCI6IjIwMjQtMTEtMTZUMjM6NTU6MTYuMjYzWiIsInVwZGF0ZWRfYXQiOiIyMDI0LTExLTE2VDIzOjU1OjE2LjI2M1oiLCJlbWFpbCI6ImVtYWlsQGVtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA0JGJ3bzM1b2VZb2NXTElBSmZiLmF3RHV1THJGcFlZemJwM3BnQjVWaTJJUmVneXZjOThWM0txIn0sImlhdCI6MTczMTg1ODgxNywiZXhwIjoxNzMxOTQ1MjE3fQ.s7ibDpUyO2Odv0luCEWPBbOLeGH5cALiXe3nqw98WYo
+
+{
+    "url": "https://www.google.com",
+    "email": "email@email.com"
+}

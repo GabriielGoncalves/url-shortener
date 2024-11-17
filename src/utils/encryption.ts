@@ -12,7 +12,7 @@ export default class Encryption {
 
   static async decrypt(encryptedText: string, simpleText: string): Promise<boolean> {
     try {
-      return await bcrypt.compare(encryptedText, simpleText);
+      return await bcrypt.compare(simpleText, encryptedText);
     } catch (error) {
       throw new Error("Failed to decrypt text.");
     }

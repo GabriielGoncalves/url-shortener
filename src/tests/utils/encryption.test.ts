@@ -41,7 +41,7 @@ test.serial("decrypt", async (t) => {
   const response = await Encryption.decrypt("encryptedText", "text");
 
   t.deepEqual(response, "decrypted");
-  t.deepEqual(stubCompare.args[0], ["encryptedText", "text"]);
+  t.deepEqual(stubCompare.args[0], ["text", "encryptedText"]);
 });
 
 test.serial("decrypt - fail case", async (t) => {

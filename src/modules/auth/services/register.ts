@@ -3,7 +3,7 @@ import Encryption from "../../../utils/encryption";
 import { IAuthUserData, IRegisterUserService } from "../interfaces/register";
 import authRepository from '../repositories'
 
-class RegisterUserService implements IRegisterUserService {
+export class RegisterUserService implements IRegisterUserService {
   constructor(protected repo: IRepository) {}
 
   async register(data: IAuthUserData): Promise<string> {

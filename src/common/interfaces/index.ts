@@ -1,3 +1,3 @@
-interface IController {
+export default interface IController {
   execute(): Promise<any>;
 }

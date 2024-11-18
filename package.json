@@ -10,6 +10,7 @@
     "start": "node ./dist/app.js",
     "m:g": "npx typeorm-ts-node-commonjs -d ./src/database/connection.ts migration:generate ./src/database/migrations/default",
     "m:run": "npx typeorm-ts-node-commonjs -d ./src/database/connection.ts migration:run",
+    "m:run:p": "npx typeorm-ts-node-commonjs -d ./database/connection.js migration:run",
     "m:revert": "npx typeorm-ts-node-commonjs -d ./src/database/connection.ts migration:revert"
   },
   "repository": {

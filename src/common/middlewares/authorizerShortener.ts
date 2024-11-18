@@ -29,8 +29,7 @@ const isAuthorized = (req: Request, res: Response, next: NextFunction) => {
 
     req.body = {
       ...req.body,
-      token: isValidToken.data,
-      userId: isValidToken.data.id,
+      info_user: isValidToken.data,
     };
 
     next();

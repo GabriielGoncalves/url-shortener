@@ -4,8 +4,7 @@ interface IUrlShortenerService {
 
 interface IShortenerData {
   url: string;
-  token?: string;
-  user_id?: string;
+  info_user?: any;
 }
 
 export { IUrlShortenerService, IShortenerData };

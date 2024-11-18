@@ -4,6 +4,7 @@ import RegisterController from "../controllers/register";
 import LoginController from "../controllers/login";
 import { IRegisterData } from "../interfaces/register";
 import registerUserService from "../services/register";
+import authenticationService from "../services/authentication";
 
 const router = Router();
 
@@ -40,7 +41,7 @@ router.post(
         body: req.body,
       };
 
-      const instance = new LoginController(data, {} as any);
+      const instance = new LoginController(data, authenticationService);
 
       const response = await instance.execute();
 

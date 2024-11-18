@@ -43,7 +43,7 @@ test.serial("persistInformation - fail case", async (t) => {
   );
 });
 
-test.serial("shorten - there is no token", async (t) => {
+test.serial("shorten - there is no info_user", async (t) => {
   const response = await urlShortenerService["shorten"](<any>{});
 
   t.deepEqual(response, "base-url/123456");
@@ -55,8 +55,9 @@ test.serial("shorten", async (t) => {
     .resolves();
 
   const response = await urlShortenerService["shorten"](<any>{
-    token: "token",
-    user_id: "user",
+    info_user: {
+      id: "user",
+    },
     url: "url",
   });
 

@@ -18,9 +18,10 @@ export default class App {
     this.app.use("/api", router);
   }
 
-  protected async start() {
+  protected async start(delay: number = 5000) {
     const port = process.env.PORT || 3000;
 
+    await new Promise((resolve) => setTimeout(resolve, delay));
     await connection
       .initialize()
       .then(() => {
@@ -28,6 +29,6 @@ export default class App {
           console.log(`running on port ${port}`);
         });
       })
-      .catch((e) => console.log(e));
+      .catch((e) => console.log);
   }
 }

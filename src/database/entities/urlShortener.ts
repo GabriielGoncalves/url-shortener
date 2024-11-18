@@ -20,8 +20,8 @@ export class UrlShortener {
   @UpdateDateColumn()
   updated_at: string;
 
-  @Column({ type: "boolean", nullable: true })
-  is_active?: boolean;
+  @Column({ type: "boolean", default: true })
+  is_active: boolean;
 
   @Column({ type: "text" })
   originalUrl: string;

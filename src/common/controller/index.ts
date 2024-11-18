@@ -3,7 +3,7 @@ import { IRegisterData } from "../../modules/auth/interfaces/register";
 import IController from "../interfaces";
 
 export default abstract class BaseController implements IController {
-  constructor(protected data: IRegisterData) {}
+  constructor(protected data: any) {}
 
   abstract execute(): Promise<any>;
 

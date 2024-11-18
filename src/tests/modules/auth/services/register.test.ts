@@ -16,6 +16,7 @@ test.serial.beforeEach(() => {
     async save(data: any) {
       return "";
     },
+    async find() {},
   };
 
   sut = new RegisterUserService(repo);

@@ -10,11 +10,11 @@ class UrlShortenerService implements IUrlShortenerService {
   async shorten(data: IShortenerData): Promise<any> {
     const urlId = this.generateUrlIdentification();
 
-    if (data.token) {
+    if (data.info_user) {
       await this.persistInformation({
         id: urlId,
         user: {
-          id: data.user_id,
+          id: data.info_user.id,
         },
         originalUrl: data.url,
       });

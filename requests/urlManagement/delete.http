@@ -1,4 +1,5 @@
-@id = IyM0XT
+@id = PCM9wk
 ###
-DELETE http://localhost:3000/api/redirector/{{id}} HTTP/1.0
+DELETE http://localhost:3000/api/url-management/{{id}} HTTP/1.0
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiMzEzODk3MDAtNTRhYy00YWMwLWJhYTAtNTIxOTdlZDQ3OWI2IiwiY3JlYXRlZF9hdCI6IjIwMjQtMTEtMThUMDY6MjY6MTkuMDczWiIsInVwZGF0ZWRfYXQiOiIyMDI0LTExLTE4VDA2OjI2OjE5LjA3M1oiLCJlbWFpbCI6ImVtYWlsQGVtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA0JDJZcFZicWJJeVRWRnMxL2dMM0tPRXUuaEgzMzk0a1FpRjVob0hHNkg2SzBoaThQRlNXLjNTIn0sImlhdCI6MTczMTkwMDM5MiwiZXhwIjoxNzMxOTg2NzkyfQ.WO6Gk3gLijRlH2pmI_psFx2JkYgoqKf9UeXALTm9dS0

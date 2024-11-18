@@ -1,6 +1,12 @@
 import { Request } from "express";
 
-export interface IRedirectorData {
+interface IRedirectorData {
   request: Request;
   id: string;
 }
+
+interface IRedirectorService {
+  execute(id: string): Promise<any>;
+}
+
+export { IRedirectorService, IRedirectorData };

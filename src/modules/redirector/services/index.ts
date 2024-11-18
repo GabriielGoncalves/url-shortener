@@ -1,11 +1,7 @@
-import { IRepository } from "../../../database/repositories/interfaces";
 import urlShortenerRepository, {
   UrlShortenerRepository,
 } from "../../shortener/repositories";
-
-interface IRedirectorService {
-  execute(id: string): Promise<any>;
-}
+import { IRedirectorService } from "../interfaces";
 
 class RedirectorService implements IRedirectorService {
   constructor(protected repo: UrlShortenerRepository) {}

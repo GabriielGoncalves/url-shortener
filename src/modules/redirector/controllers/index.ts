@@ -1,8 +1,11 @@
 import { validationResult } from "express-validator";
-import { IRedirectorData } from "../interfaces";
+import { IRedirectorData, IRedirectorService } from "../interfaces";
 
 export default class RedirectorController {
-  constructor(protected data: IRedirectorData, protected service: any) {}
+  constructor(
+    protected data: IRedirectorData,
+    protected service: IRedirectorService
+  ) {}
 
   async execute(): Promise<any> {
     try {

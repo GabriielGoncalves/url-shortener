@@ -5,6 +5,7 @@ import {
   IAuthenticator,
   IResponseAuthentication,
 } from "../../interfaces/authenticator";
+import authRepository from "../../../modules/auth/repositories";
 
 export class Authenticator implements IAuthenticator {
   constructor(protected repo: IRepository) {}
@@ -33,3 +34,7 @@ export class Authenticator implements IAuthenticator {
     };
   }
 }
+
+const authenticator = new Authenticator(authRepository);
+
+export default authenticator;

@@ -1,5 +1,10 @@
 import { IAuthenticator } from "../../../common/interfaces/authenticator";
-import { IAuthorizer, IResponseAuthorizer } from "../../../common/interfaces/authorizer";
+import {
+  IAuthorizer,
+  IResponseAuthorizer,
+} from "../../../common/interfaces/authorizer";
+import authenticator from "../../../common/utils/auth/authenticator";
+import Authorizer from "../../../common/utils/auth/authorizer";
 import IAuthenticationService from "../interfaces/authentication";
 import { IAuthUserData } from "../interfaces/register";
 
@@ -23,3 +28,10 @@ class AuthenticationService implements IAuthenticationService {
     }
   }
 }
+
+const authenticationService = new AuthenticationService(
+  authenticator,
+  new Authorizer()
+);
+
+export default authenticationService;

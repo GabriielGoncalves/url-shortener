@@ -1,0 +1,4 @@
+@id = IyM0XT
+###
+PUT http://localhost:3000/api/redirector/{{id}} HTTP/1.0
+Content-Type: application/json
